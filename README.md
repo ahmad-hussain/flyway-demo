@@ -1,4 +1,4 @@
-# Flyway Demo
+# Flyway Demo - Automating SQL patches
 Flyway example for reference 
 
 ```docker-compose up``` to boot up postgres database
