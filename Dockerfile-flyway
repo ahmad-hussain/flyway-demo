@@ -1,0 +1,4 @@
+FROM flyway/flyway:latest-alpine
+COPY project/sql/patches /flyway/sql
+ENTRYPOINT []
+CMD /flyway/flyway -url=jdbc:postgresql://${PSQL_HOST}:5432/${PSQL_NAME} -user=${PSQL_USER} -password=${PSQL_PASSWORD} -mixed=true -sqlMigrationPrefix=patch_ -connectRetries=5 migrate
